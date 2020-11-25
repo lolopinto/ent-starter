@@ -5,8 +5,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-develop
-      args:
-        - GITHUB_TOKEN=${GITHUB_TOKEN}
         # change to name of your app
     container_name: ent-starter
     ports:
@@ -17,4 +15,3 @@ services:
     environment:
       # golang which we use needs the sslmode=disable bit
       - DB_CONNECTION_STRING=postgres://ola:@host.docker.internal/ent-starter?sslmode=disable
-      - GITHUB_TOKEN=${GITHUB_TOKEN}
