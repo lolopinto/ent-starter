@@ -4,7 +4,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile-develop
+      dockerfile: develop.Dockerfile
         # change to name of your app
     container_name: ent-starter
     ports:

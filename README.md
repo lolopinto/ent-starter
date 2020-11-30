@@ -2,10 +2,11 @@
 
 ensure you have postgres installed
 
+* install [docker](https://docs.docker.com/get-docker/)
 * `createdb ent-starter` (replace with name of your app)
 * update db credentials in `docker-compose.dev.yml` by changing `DB_CONNECTION_STRING` environment variable
 * get a github [personal access token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)
-  - ensure the token has `repo` read/write and `read:packages` privileges
+  - ensure the token has `read:packages` privileges
   - create/edit ~/.npmrc and add this line: `//npm.pkg.github.com/:_authToken={TOKEN}`
   - full details of what's happening here can be found at https://docs.github.com/en/free-pro-team@latest/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages#authenticating-with-a-personal-access-token
 * run `npm install`
@@ -15,6 +16,7 @@ ensure you have postgres installed
 Example schema change:
 
 ```ts
+// src/schema/user.ts
 // this adds a User object with a firstName and lastName
 import { BaseEntSchema, Field, StringType } from "@lolopinto/ent";
 
