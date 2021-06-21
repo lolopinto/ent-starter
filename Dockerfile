@@ -1,4 +1,4 @@
-FROM ghcr.io/lolopinto/ent:0.0.11
+FROM ghcr.io/lolopinto/ent:0.0.12
 
 WORKDIR /app
 
