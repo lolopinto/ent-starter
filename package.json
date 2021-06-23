@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "compile": "rm -rf dist && ./node_modules/.bin/ent-custom-compiler",
-    "start": "docker-compose -f docker-compose.dev.yml up --build",
+    "start": "docker-compose -f docker-compose.dev.yml up",
+    "init": "docker-compose -f docker-compose.dev.yml run --rm app npm install",
     "codegen": "docker-compose -f docker-compose.dev.yml run --rm app tsent codegen",
     "rebuild-image": "docker-compose -f docker-compose.dev.yml build",
     "upgrade": "docker-compose -f docker-compose.dev.yml run --rm app tsent upgrade"
