@@ -14,7 +14,7 @@ Example schema change:
 ```ts
 // src/schema/user.ts
 // this adds a User object with a firstName and lastName
-import { BaseEntSchema, Field, StringType } from "@snowtop/snowtop-ts";
+import { BaseEntSchema, Field, StringType } from "@snowtop/ent";
 
 export default class User extends BaseEntSchema {
   fields: Field[] = [
