@@ -1,6 +1,6 @@
-FROM ghcr.io/lolopinto/ent:0.0.20-nodejs-16
-# ghcr.io/lolopinto/ent:0.0.20-nodejs-14
-# ghcr.io/lolopinto/ent:0.0.20-nodejs-15
+FROM ghcr.io/lolopinto/ent:0.0.20-nodejs-16-slim
+# ghcr.io/lolopinto/ent:0.0.20-nodejs-14-slim
+# ghcr.io/lolopinto/ent:0.0.20-nodejs-15-slim
 
 WORKDIR /app
 
