@@ -13,4 +13,6 @@ services:
     volumes:
       - .:/app:rw,delegated
     environment:
-      - DB_CONNECTION_STRING=postgres://ola:@host.docker.internal/ent-starter
+     - DB_CONNECTION_STRING=postgres://ola:@host.docker.internal/ent-starter
+    # for sqlite
+    # - DB_CONNECTION_STRING=sqlite:///ent-starter2.db

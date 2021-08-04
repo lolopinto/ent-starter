@@ -7,7 +7,7 @@
     "test": "jest",
     "compile": "rm -rf dist && ./node_modules/.bin/ent-custom-compiler",
     "start": "docker-compose -f docker-compose.dev.yml up",
-    "init": "docker-compose -f docker-compose.dev.yml run --rm app npm install",
+    "init": "rm -rf node_modules && docker-compose -f docker-compose.dev.yml run --rm app npm install",
     "codegen": "docker-compose -f docker-compose.dev.yml run --rm app tsent codegen",
     "rebuild-image": "docker-compose -f docker-compose.dev.yml build",
     "upgrade": "docker-compose -f docker-compose.dev.yml run --rm app tsent upgrade"
@@ -27,7 +27,9 @@
   },
   "homepage": "https://github.com/lolopinto/ent-starter#readme",
   "dependencies": {
-    "@snowtop/ent": "^0.0.1",
+    "@snowtop/ent": "^0.0.4",
+    "@snowtop/ent-email": "^0.0.1",
+    "@snowtop/ent-password": "^0.0.1",
     "@types/express": "^4.17.9",
     "express": "^4.17.1",
     "express-graphql": "^0.12.0",
