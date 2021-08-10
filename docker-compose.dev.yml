@@ -1,6 +1,20 @@
 version: '3.8'
 
 services:
+  # uncomment this out to use postgres via the postgres image instead of local instance
+  # db:
+  #   image: postgres
+  #   environment:
+  #     - POSTGRES_DB=ent-starter
+  #     - POSTGRES_USER=postgres
+  #     - POSTGRES_PASSWORD=postgres
+  #     # not ideal but it's all local and the quickest way I could get it to work
+  #     - POSTGRES_HOST_AUTH_METHOD=trust
+
+  #   volumes:
+  #     #  feel free to update to store the data in a different location
+  #     - ./postgres_data/db:/var/lib/postgresql/data
+
   app:
     build:
       context: .
@@ -13,6 +27,9 @@ services:
     volumes:
       - .:/app:rw,delegated
     environment:
-#     - DB_CONNECTION_STRING=postgres://ola:@host.docker.internal/ent-starter
-    # for sqlite
-     - DB_CONNECTION_STRING=sqlite:///ent-starter2.db
+    # postgres on local machine
+     - DB_CONNECTION_STRING=postgres://ola:@host.docker.internal/ent-starter
+     # postgres docker image
+    # - DB_CONNECTION_STRING=postgres://postgres:postgres@db/ent-starter
+    # local sqlite file
+    #- DB_CONNECTION_STRING=sqlite:///ent-starter2.db
