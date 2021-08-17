@@ -7,6 +7,7 @@ This assumes Postgres installed and being used. Other options:
 
 Steps:
 
+* Ensure you're logged in to Github and then click "Use this template" to create your own instance of the repository. And then clone your copy of the repository to your local machine to make changes.
 * Install [Docker](https://docs.docker.com/get-docker/)
 * Run `createdb ent-starter` (replace with name of your app)
 * update db credentials in `docker-compose.dev.yml` by changing `DB_CONNECTION_STRING` environment variable
