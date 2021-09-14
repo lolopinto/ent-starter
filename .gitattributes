@@ -1,0 +1,3 @@
+src/schema/versions/* linguist-generated=true
+src/schema/schema.py linguist-generated=true
+generated/** linguist-generated=true
