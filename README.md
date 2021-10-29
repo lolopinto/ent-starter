@@ -60,6 +60,7 @@ Instead of installing Postgres and having to deal with a local install, you can 
 * Add `background` as a script to the `scripts` section of `package.json` with value `docker-compose -f docker-compose.dev.yml up -d` to run in [detached mode](https://docs.docker.com/compose/reference/up/) since some of the commands require the database to be available and listening to connections before they can succeed.
 * Run `npm run background` to start the database in the background.
 * Run `npm install` to install dependencies
+* Run `npm run psql` to connect to database. Seems to be required to have the connection to database consistently work.
 * Run `npm run codegen` after making any changes to the schema
 * Make sure to run `npm run compile` after making any changes to the code and before running `npm start`
 
