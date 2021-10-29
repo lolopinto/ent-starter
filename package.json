@@ -9,7 +9,8 @@
     "start": "docker-compose -f docker-compose.dev.yml up",
     "codegen": "docker-compose -f docker-compose.dev.yml run --rm app tsent codegen",
     "rebuild-image": "docker-compose -f docker-compose.dev.yml build",
-    "upgrade": "docker-compose -f docker-compose.dev.yml run --rm app tsent upgrade"
+    "upgrade": "docker-compose -f docker-compose.dev.yml run --rm app tsent upgrade",
+    "downgrade": "docker-compose -f docker-compose.dev.yml run --rm app tsent downgrade"
   },
   "repository": {
     "type": "git",
