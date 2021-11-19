@@ -1,4 +1,4 @@
-FROM ghcr.io/lolopinto/ent:0.0.29-nodejs-16-slim
+FROM ghcr.io/lolopinto/ent:0.0.31-nodejs-16-slim
 # ghcr.io/lolopinto/ent:0.0.29-nodejs-14-slim
 # ghcr.io/lolopinto/ent:0.0.29-nodejs-15-slim
 
