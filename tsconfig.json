@@ -15,10 +15,6 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "paths": {
-      // TODO
-      "ent/*": [
-        "@lolopinto/ent/*",
-      ],
       "src/*": [
         "./src/*"
       ],
