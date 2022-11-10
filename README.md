@@ -35,14 +35,15 @@ Example schema change:
 ```ts
 // src/schema/user.ts
 // this adds a User object with a firstName and lastName
-import { BaseEntSchema, Field, StringType } from "@snowtop/ent";
+import { EntSchema, StringType } from "@snowtop/ent";
 
-export default class User extends BaseEntSchema {
-  fields: Field[] = [
-    StringType({ name: "FirstName" }),
-    StringType({ name: "LastName" }),
-  ];
-}
+const UserSchema = new EntSchema({
+  fields: {
+    firstName: StringType(),
+    lastName: StringType(),
+  },
+});
+export default UserSchema;
 ```
 
 For a full intro, check out the [docs](https://ent.dev/docs/intro#your-first-schema).
@@ -69,14 +70,15 @@ Example schema change:
 ```ts
 // src/schema/user.ts
 // this adds a User object with a firstName and lastName
-import { BaseEntSchema, Field, StringType } from "@snowtop/ent";
+import { EntSchema, StringType } from "@snowtop/ent";
 
-export default class User extends BaseEntSchema {
-  fields: Field[] = [
-    StringType({ name: "FirstName" }),
-    StringType({ name: "LastName" }),
-  ];
-}
+const UserSchema = new EntSchema({
+  fields: {
+    firstName: StringType(),
+    lastName: StringType(),
+  },
+});
+export default UserSchema;
 ```
 
 When done, run `docker container ls | grep ent-starter  | cut -d " " -f 1 | xargs docker stop` to stop all containers.
@@ -95,12 +97,15 @@ Example schema change:
 ```ts
 // src/schema/user.ts
 // this adds a User object with a firstName and lastName
-import { BaseEntSchema, Field, StringType } from "@snowtop/ent";
+// src/schema/user.ts
+// this adds a User object with a firstName and lastName
+import { EntSchema, StringType } from "@snowtop/ent";
 
-export default class User extends BaseEntSchema {
-  fields: Field[] = [
-    StringType({ name: "FirstName" }),
-    StringType({ name: "LastName" }),
-  ];
-}
+const UserSchema = new EntSchema({
+  fields: {
+    firstName: StringType(),
+    lastName: StringType(),
+  },
+});
+export default UserSchema;
 ```

@@ -1,4 +1,5 @@
-FROM ghcr.io/lolopinto/ent:0.0.33-nodejs-17-slim
+FROM ghcr.io/lolopinto/ent:0.1.0-alpha.5-nodejs-17-dev
+# ghcr.io/lolopinto/ent:0.0.33-nodejs-17-slim
 # ghcr.io/lolopinto/ent:0.0.33-nodejs-14-slim
 # ghcr.io/lolopinto/ent:0.0.33-nodejs-16-slim
 
@@ -6,8 +7,8 @@ WORKDIR /app
 
 COPY . /app
 
-RUN rm -rf node_modules 
-#RUN rm package-lock.json 
+RUN rm -rf node_modules
+#RUN rm package-lock.json
 ENV NODE_ENV=production
 RUN npm install --production
 RUN npm run compile
