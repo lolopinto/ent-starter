@@ -33,7 +33,7 @@ There are 3 different supported ways to store data:
 Example schema change:
 
 ```ts
-// src/schema/user.ts
+// src/schema/user_schema.ts
 // this adds a User object with a firstName and lastName
 import { EntSchema, StringType } from "@snowtop/ent";
 
@@ -68,7 +68,7 @@ Instead of installing Postgres and having to deal with a local install, you can 
 Example schema change:
 
 ```ts
-// src/schema/user.ts
+// src/schema/user_schema.ts
 // this adds a User object with a firstName and lastName
 import { EntSchema, StringType } from "@snowtop/ent";
 
@@ -95,9 +95,7 @@ When done, run `docker container ls | grep ent-starter  | cut -d " " -f 1 | xarg
 Example schema change:
 
 ```ts
-// src/schema/user.ts
-// this adds a User object with a firstName and lastName
-// src/schema/user.ts
+// src/schema/user_schema.ts
 // this adds a User object with a firstName and lastName
 import { EntSchema, StringType } from "@snowtop/ent";
 
