@@ -33,16 +33,17 @@ There are 3 different supported ways to store data:
 Example schema change:
 
 ```ts
-// src/schema/user.ts
+// src/schema/user_schema.ts
 // this adds a User object with a firstName and lastName
-import { BaseEntSchema, Field, StringType } from "@snowtop/ent";
+import { EntSchema, StringType } from "@snowtop/ent";
 
-export default class User extends BaseEntSchema {
-  fields: Field[] = [
-    StringType({ name: "FirstName" }),
-    StringType({ name: "LastName" }),
-  ];
-}
+const UserSchema = new EntSchema({
+  fields: {
+    firstName: StringType(),
+    lastName: StringType(),
+  },
+});
+export default UserSchema;
 ```
 
 For a full intro, check out the [docs](https://ent.dev/docs/intro#your-first-schema).
@@ -67,16 +68,17 @@ Instead of installing Postgres and having to deal with a local install, you can 
 Example schema change:
 
 ```ts
-// src/schema/user.ts
+// src/schema/user_schema.ts
 // this adds a User object with a firstName and lastName
-import { BaseEntSchema, Field, StringType } from "@snowtop/ent";
+import { EntSchema, StringType } from "@snowtop/ent";
 
-export default class User extends BaseEntSchema {
-  fields: Field[] = [
-    StringType({ name: "FirstName" }),
-    StringType({ name: "LastName" }),
-  ];
-}
+const UserSchema = new EntSchema({
+  fields: {
+    firstName: StringType(),
+    lastName: StringType(),
+  },
+});
+export default UserSchema;
 ```
 
 When done, run `docker container ls | grep ent-starter  | cut -d " " -f 1 | xargs docker stop` to stop all containers.
@@ -93,14 +95,15 @@ When done, run `docker container ls | grep ent-starter  | cut -d " " -f 1 | xarg
 Example schema change:
 
 ```ts
-// src/schema/user.ts
+// src/schema/user_schema.ts
 // this adds a User object with a firstName and lastName
-import { BaseEntSchema, Field, StringType } from "@snowtop/ent";
+import { EntSchema, StringType } from "@snowtop/ent";
 
-export default class User extends BaseEntSchema {
-  fields: Field[] = [
-    StringType({ name: "FirstName" }),
-    StringType({ name: "LastName" }),
-  ];
-}
+const UserSchema = new EntSchema({
+  fields: {
+    firstName: StringType(),
+    lastName: StringType(),
+  },
+});
+export default UserSchema;
 ```
