@@ -5,3 +5,5 @@ build
 .env
 *.pyc
 *.db
+# for ent build files
+.ent
