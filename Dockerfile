@@ -1,4 +1,4 @@
-FROM ghcr.io/lolopinto/ent:0.1.0-alpha.50-nodejs-18-slim
+FROM ghcr.io/lolopinto/ent:0.1.0-rc1-nodejs-18-slim
 
 WORKDIR /app
 
