@@ -27,7 +27,7 @@ services:
       - .:/app:rw,delegated
     environment:
     # postgres on local machine
-    - DB_CONNECTION_STRING=postgres://ola:@host.docker.internal/ent-starter
+    - DB_CONNECTION_STRING=postgres://$USER:@host.docker.internal/ent-starter
     # postgres docker image
     # - DB_CONNECTION_STRING=postgres://postgres:postgres@db/ent-starter
     # local sqlite file
