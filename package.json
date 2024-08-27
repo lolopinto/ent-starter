@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/lolopinto/ent-starter#readme",
   "dependencies": {
-    "@snowtop/ent": "^0.1.23",
+    "@snowtop/ent": "^0.2.0-alpha.5",
     "@snowtop/ent-email": "^0.1.0",
     "@snowtop/ent-password": "^0.1.0",
     "@snowtop/ent-phonenumber": "^0.1.0",
